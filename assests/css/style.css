@@ -41,8 +41,13 @@ nav{
 table,tr,td {
 	border:1px transparent;
 	text-align:center;
-  }
+}
 
+.card-img-top{
+	padding: 10px;
+	height: auto;
+	weight: auto;
+}
 
 li {
 	float: left;
