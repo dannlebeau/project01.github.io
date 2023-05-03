@@ -1,10 +1,14 @@
+
+
+
+
 //Formulario 1
 const btnEnviar = document.querySelector("#submit");
 btnEnviar.addEventListener("click", enviarFormulario);
 
 
 function enviarFormulario(event) {
-    console.log("La función enviar Formulario se ha ejecutado correctamente");
+    console.log("La función enviar formulario se ha ejecutado correctamente");
   
     event.preventDefault(); // Evitar que el formulario se envíe automáticamente
   
@@ -71,4 +75,77 @@ function enviarFormulario(event) {
 
     // Reseteo de formulario al enviarlo  --> Esta pendiente 
     //document.getElementById("form_1").reset();
+
+
+
+
+
+
+    //Formulario 2---> JQuery
+   /* $(document).ready(function() {
+        $("#reservarBtn").click(function() {
+          var nombre = $("#name").val();
+          var email = $("#email").val();
+          var telefono = $("#phone").val();
+          var fecha = $("#date").val();
+          var hora = $("#time").val();
+          var cantidad = $("#quantity").val();
+
+          if (nombre === "") {
+            alert("El campo de nombre es obligatorio");
+            return;
+          }
+
+          if (email === ""){
+            alert("el campo correo electronico es obligatorio");
+            return;
+          }
+          
+          if (telefono === ""){
+            alert("el campo telefono es obligatorio");
+            return;
+          }
+          if (fecha === ""){
+            alert("el campo fecha es obligatorio");
+            return;
+          }
+          if (hora === ""){
+            alert("el campo hora es obligatorio");
+            return;
+          }
+
+          if (cantidad === "" || cantidad >6){
+            alert("el campo cantidad es obligatorio");
+            return;
+          }
+          
+          var mensaje = "Estimado " + nombre + ", agradecemos por reservar con nosotros. Hemos registrado " + cantidad + " asistentes, para el " + fecha + " a las " + hora + ". Se ha enviado el código de confirmación al correo " + email + " y al número " + telefono + ".";
+          console.log(mensaje)
+          alert(mensaje);
+          return true;
+        });
+      });*/
+
+      $(document).ready(function() {
+        $("#reservarBtn").click(function() {
+          var nombre = $("#name").val();
+          var email = $("#email_1").val();
+          var telefono = $("#phone_1").val();
+          var fecha = $("#date").val();
+          var hora = $("#time").val();
+          var cantidad = $("#quantity").val();
+          var mensaje = "Estimado " + nombre + ", agradecemos por reservar con nosotros. Hemos registrado " + cantidad + " asistentes, para el " + fecha + " a las " + hora + ". Se ha enviado el código de confirmación al correo " + email + " y al número " + telefono + "." + "Gracias por preferirnos";
+          alert(mensaje);
+          console.log(nombre)
+          console.log(email)
+          console.log(telefono)
+          console.log(fecha)
+          console.log(hora)
+          console.log(cantidad)
+          console.log(mensaje)
+          return true;
+        });
+      });
+      
+
 
