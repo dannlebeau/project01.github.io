@@ -1,39 +1,30 @@
-const form = document.getElementById('form_1');
+//Formulario 1
+const btnEnviar = document.querySelector("#submit");
+btnEnviar.addEventListener("click", enviarFormulario);
 
- 
 
-form.addEventListener('submit', (event) => {
-  // Cancelar el envío del formulario
-  event.preventDefault();
-
- 
-
-  // Obtener los valores de los campos
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const motivo = document.getElementById('motivo').value;
-    const comentario = document.getElementById('comentario').value;
-
- // Mostrar mensaje de agradecimiento
-    alert('Muchas gracias ${nombre} hemos recibido su sugerencia y enviaremos una pronta respuesta al correo ${email}');   
-
- 
-
-  // Validar que los campos estén completos
-  if (nombre === '' || email === ''  || phone === ''  || motivo === ''  || comentario === '' ) {
-    // Mostrar un mensaje de error
-    alert('Por favor complete los campos obligatorios.');
-    return;
-  }
-
- 
-
-  // Si los campos están completos, enviar el formulario
-  form.submit();
-
- 
-
-  // Mostrar un mensaje de agradecimiento
-  alert('¡Gracias por enviar el formulario!');
-});
+function enviarFormulario(event) {
+    console.log("La función enviarFormulario se ha ejecutado correctamente");
+  
+    event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+  
+    // Obtener los valores de los campos del formulario
+    const nombre = document.querySelector("#nombre").value;
+    const email = document.querySelector("#email").value;
+    const telefono = document.querySelector("#phone").value;
+    const motivo = document.querySelector("#motivo").value;
+    const comentario = document.querySelector("#comentario").value;
+  
+    // Hacer algo con los valores, como enviarlos al servidor
+    // En este ejemplo, simplemente los imprimimos en la consola
+    console.log("Nombre:", nombre);
+    console.log("Correo electrónico:", email);
+    console.log("Teléfono:", telefono);
+    console.log("Motivo:", motivo);
+    console.log("Comentario:", comentario);
+  
+    // Mostrar el mensaje de agradecimiento al usuario
+    const mensaje = `Muchas gracias ${nombre} hemos recibido su sugerencia y enviaremos una pronta respuesta al correo ${email}`;
+    alert(mensaje);
+  }
+  
