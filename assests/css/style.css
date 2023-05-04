@@ -122,8 +122,35 @@ footer{
 	display:none;
 }
 
+#bebidas:hover{
+	transform: scale(3) translate(40%, 20%);
+	transform-origin: center center;
+	z-index:1;
+	position:relative;
+	box-shadow: 0 0 20px #fff, 0 0 40px #0ff, 0 0 60px #0ff, 0 0 80px #0ff;
+  	margin: 10px;
+	
+}
 
+#tablas:hover{
+	transform: scale(3) translate(10%, 20%);
+	transform-origin: center center;
+	z-index:1;
+	position:relative;
+	box-shadow: 0 0 20px #fff, 0 0 40px #0ff, 0 0 60px #0ff, 0 0 80px #0ff;
+  	margin: 10px;
+	
+}
 
+#shop:hover{
+	transform: scale(3) translate(-30%, 20%);
+	transform-origin: center center;
+	z-index:1;
+	position:relative;
+	box-shadow: 0 0 20px #fff, 0 0 40px #0ff, 0 0 60px #0ff, 0 0 80px #0ff;
+  	margin: 10px;
+	
+}
 
 
 
